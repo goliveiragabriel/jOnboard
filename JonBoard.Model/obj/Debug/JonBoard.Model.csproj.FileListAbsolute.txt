@@ -1,0 +1,5 @@
+F:\Projetos C#\jOnboard\jOnBoard\JonBoard.Model\bin\Debug\JonBoard.Model.dll
+F:\Projetos C#\jOnboard\jOnBoard\JonBoard.Model\bin\Debug\JonBoard.Model.pdb
+F:\Projetos C#\jOnboard\jOnBoard\JonBoard.Model\obj\Debug\JonBoard.Model.csprojResolveAssemblyReference.cache
+F:\Projetos C#\jOnboard\jOnBoard\JonBoard.Model\obj\Debug\JonBoard.Model.dll
+F:\Projetos C#\jOnboard\jOnBoard\JonBoard.Model\obj\Debug\JonBoard.Model.pdb

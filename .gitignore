@@ -1,2 +1,4 @@
-obj/
-bin/
+jOnBoard/obj/
+jOnBoard/bin/
+JonBoard.DAL/obj/
+JonBoard.Web/obj/
