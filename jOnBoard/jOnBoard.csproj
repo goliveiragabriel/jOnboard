@@ -280,7 +280,7 @@
       <Project>{698bf3e4-3220-4690-89db-19a8ffa9f6f6}</Project>
       <Name>JonBoard.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JonBoardContext\JonBoard.DAL.csproj">
+    <ProjectReference Include="..\JonBoard.DAL\JonBoard.DAL.csproj">
       <Project>{5f3dda93-1930-4f1b-a4f2-bdb1bd3301b3}</Project>
       <Name>JonBoard.DAL</Name>
     </ProjectReference>

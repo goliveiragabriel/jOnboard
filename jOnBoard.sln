@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JonBoard.DAL", "JonBoardContext\JonBoard.DAL.csproj", "{5F3DDA93-1930-4F1B-A4F2-BDB1BD3301B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JonBoard.DAL", "JonBoard.DAL\JonBoard.DAL.csproj", "{5F3DDA93-1930-4F1B-A4F2-BDB1BD3301B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JonBoard.Model", "JonBoard.Model\JonBoard.Model.csproj", "{698BF3E4-3220-4690-89DB-19A8FFA9F6F6}"
 EndProject
