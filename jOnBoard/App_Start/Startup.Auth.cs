@@ -6,13 +6,16 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using jOnBoard.Models;
+using Newtonsoft.Json;
+using Microsoft.AspNet.SignalR;
 
+[assembly: OwinStartup(typeof(jOnBoard.Startup))]
 namespace jOnBoard
 {
-    public partial class StartupAuth
+    public partial class Startup
     {
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
-        public void ConfigureAuth(IAppBuilder app)
+        public void Configuration(IAppBuilder app)
         {
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
@@ -58,11 +61,26 @@ namespace jOnBoard
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "",
+                ClientSecret = ""
+            });
+
+            var serializer = new JsonSerializer()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                ObjectCreationHandling = ObjectCreationHandling.Replace,
+                StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
+                MissingMemberHandling = MissingMemberHandling.Ignore,
+                MaxDepth = 5
+            };
+
+            // register it so that signalr can pick it up
+            GlobalHost.DependencyResolver.Register(typeof(JsonSerializer), () => serializer);
+            // Any connection or hub wire up and configuration should go here
+            app.MapSignalR();
         }
+
     }
 }
