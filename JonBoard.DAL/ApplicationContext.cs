@@ -21,5 +21,7 @@ namespace JonBoard.DAL
             //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
+
     }
+
 }

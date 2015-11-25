@@ -39,24 +39,33 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("My Board", "Index", "Canvas")</li>
+                    }
                 </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="nav navbar-nav pull-right user-info dropdown">
+                        <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-user"></i>@User.Identity.Name
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">@Html.ActionLink("Sair", "LogOff", "Account")</a></li>
+                        </ul>
+                    </div>
+                }
             </div>
         </div>
     </div>
     <div class="container-fluid body-content">
         <div class="row">
-            <aside class="col-xs-2" id="sidebar">
-                <div class="input-group colorpicker-component demo demo-auto colorpicker-element">
-                    <input type="text" class="form-control" value="#000">
-                    <span class="input-group-addon"><i></i></span>
-                </div>
-                <div class="input-group">
-                    <a href="#" class="" id="undo"><i class="fa fa-rotate-left"></i></a>
-                </div>
-                
-            </aside>
-            <div class="colxs-10">
+            <div class="col-xs-12">
                 @RenderBody()
             </div>
         </div>
@@ -79,4 +88,5 @@
 
     @RenderSection("scripts", required: false)
 </body>
+
 </html>

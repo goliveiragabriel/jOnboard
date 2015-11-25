@@ -1,8 +1,8 @@
 ﻿(function () {
     var Plan = {
         translate: {
-            x: 4,
-            y: 22
+            x: -260,
+            y: -24
         }
     }
     this.Tool = function () {

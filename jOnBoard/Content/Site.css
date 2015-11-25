@@ -25,9 +25,36 @@ textarea {
 
 #sidebar {
     background-color: #333;
-    height: 600px;
+    height: 1000px;
 }
 canvas{
     background-color: #e6e6e6;
 
+}
+button#Google i{
+    padding: 5px 5px 5px 5px;
+}
+button#Google {
+    background-color: #ff4747;
+    color: #fff;
+    border-color: #ff0000;
+}
+.user-info{
+    margin-top: 9px;
+    color: #fff;
+}
+.user-info i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #d8ccec;
+    padding: 8px;
+    border-radius: 70px;
+    background-color: #7e57c2;
+}
+.user-info a.dropdown-toggle {
+    cursor: pointer;
+    color: #ccc;
+}
+.user-info a.dropdown-toggle:hover {
+    text-decoration: none;
 }
