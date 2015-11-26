@@ -34,5 +34,7 @@ namespace jOnBoard.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<JonBoard.Model.Board> Boards { get; set; }
     }
 }

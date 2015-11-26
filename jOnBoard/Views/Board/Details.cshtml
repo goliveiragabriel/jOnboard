@@ -24,5 +24,12 @@
 <script>
     var canvas, onboardHub;
     $(document).ready(function () {
-    })
+        canvas = new Canvas("myholder");
+        $('.demo').colorpicker({
+        }).on('changeColor', function (ev) {
+            canvas.context.strokeStyle = ev.color.toHex();
+            canvas.context.save();
+
+        });
+    });
 </script>

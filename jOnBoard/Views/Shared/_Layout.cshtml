@@ -45,7 +45,7 @@
                     }
                     else
                     {
-                        <li>@Html.ActionLink("My Board", "Index", "Canvas")</li>
+                        <li>@Html.ActionLink("My Board", "Index", "Board")</li>
                     }
                 </ul>
                 @if (User.Identity.IsAuthenticated)
@@ -74,17 +74,6 @@
             <p>&copy; @DateTime.Now.Year - jOnBoard</p>
         </footer>
     </div>
-    <script>
-        $(document).ready(function () {
-            canvas = new Canvas("myholder");
-            $('.demo').colorpicker({
-            }).on('changeColor', function (ev) {
-                canvas.context.strokeStyle = ev.color.toHex();
-                canvas.context.save();
-
-            });
-        });
-    </script>
 
     @RenderSection("scripts", required: false)
 </body>

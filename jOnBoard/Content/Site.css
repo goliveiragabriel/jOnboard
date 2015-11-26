@@ -46,10 +46,10 @@ button#Google {
 .user-info i {
     font-size: 20px;
     margin-right: 5px;
-    color: #d8ccec;
+    color: #C8E6C9;
     padding: 8px;
     border-radius: 70px;
-    background-color: #7e57c2;
+    background-color: #4CAF50;
 }
 .user-info a.dropdown-toggle {
     cursor: pointer;

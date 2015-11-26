@@ -1,0 +1,26 @@
+﻿@using JonBoard.Model;
+@model Board
+@{
+    ViewBag.Title = "My Boards";
+}
+@section Scripts{
+
+}
+<div class="row">
+    <div class="hidden" id="undo"></div>
+    <div class="hidden" id="myholder"></div>
+    <div class="col-xs-12 col-md-offset-2">
+        @using (Html.BeginForm("Create", "Board", FormMethod.Post, new { id = "FrmCreateBoard" }))
+        {
+            @Html.HiddenFor(m => m.Canvas)
+            <button type="submit" class="btn btn-primary"><i class="fa fa-object-group"></i>Create Board</button>
+        }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var canvas = new Canvas("myholder");
+        delete canvas.tools; // Removido por referencia circular refatorar nome
+        $("#Canvas").val(JSON.stringify(canvas));
+    })
+</script>
