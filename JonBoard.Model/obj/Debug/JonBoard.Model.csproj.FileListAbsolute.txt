@@ -17,6 +17,3 @@ C:\Users\gabriel.goncalves\Documents\jOnboard\JonBoard.Model\bin\Debug\EntityFra
 C:\Users\gabriel.goncalves\Documents\jOnboard\JonBoard.Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\gabriel.goncalves\Documents\jOnboard\JonBoard.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\gabriel.goncalves\Documents\jOnboard\JonBoard.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\gabriel.goncalves\Documents\jOnboard\JonBoard.Model\obj\Debug\JonBoard.Model.Migrations.InitialCreate.resources
-C:\Users\gabriel.goncalves\Documents\jOnboard\JonBoard.Model\obj\Debug\JonBoard.Model.csproj.GenerateResource.Cache
-C:\Users\gabriel.goncalves\Documents\jOnboard\JonBoard.Model\obj\Debug\JonBoard.Model.Migrations.AddBoardClass.resources

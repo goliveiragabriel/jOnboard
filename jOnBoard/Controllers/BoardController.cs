@@ -8,6 +8,8 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using System.Data.Entity.Validation;
 
 namespace jOnBoard.Controllers
 {
@@ -15,7 +17,6 @@ namespace jOnBoard.Controllers
     public class BoardController : Controller
     {
         ApplicationContext db = new ApplicationContext();
-        ApplicationDbContext externalDb = new ApplicationDbContext();
 
         public DbSet<Board> GetBoards()
         {
@@ -42,7 +43,8 @@ namespace jOnBoard.Controllers
             {
                 return View("Index");
             }
-            board.User = externalDb.Users.Where(p => p.Email == User.Identity.Name).First();
+            var currentUserId = User.Identity.GetUserId();
+            board.User = db.Users.Where(p => p.Id == currentUserId).First();
             db.Boards.Add(board);
 
             try
@@ -59,6 +61,10 @@ namespace jOnBoard.Controllers
                 {
                     throw;
                 }
+            }
+            catch (DbEntityValidationException e)
+            {
+                throw e;
             }
             return RedirectToAction("Details", new { h = "A" });
         }

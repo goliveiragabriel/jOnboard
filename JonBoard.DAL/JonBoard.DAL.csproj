@@ -36,6 +36,14 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -48,9 +56,13 @@
   <ItemGroup>
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="ApplicationInitializer.cs" />
-    <Compile Include="Migrations\201511181848032_InitialMigrate.cs" />
-    <Compile Include="Migrations\201511181848032_InitialMigrate.Designer.cs">
-      <DependentUpon>201511181848032_InitialMigrate.cs</DependentUpon>
+    <Compile Include="Migrations\201511271632158_InitialCreate.cs" />
+    <Compile Include="Migrations\201511271632158_InitialCreate.Designer.cs">
+      <DependentUpon>201511271632158_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511271637304_AddBoardUserRelationship.cs" />
+    <Compile Include="Migrations\201511271637304_AddBoardUserRelationship.Designer.cs">
+      <DependentUpon>201511271637304_AddBoardUserRelationship.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +78,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511181848032_InitialMigrate.resx">
-      <DependentUpon>201511181848032_InitialMigrate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511271632158_InitialCreate.resx">
+      <DependentUpon>201511271632158_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271637304_AddBoardUserRelationship.resx">
+      <DependentUpon>201511271637304_AddBoardUserRelationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

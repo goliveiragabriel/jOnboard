@@ -20,21 +20,24 @@ namespace jOnBoard.Models
             return userIdentity;
         }
 
-        public virtual List<Board> Boards { get; set; }
+        public virtual List<Board> Boards { get; set;}
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
-        public ApplicationDbContext()
-            : base("ApplicationContext", throwIfV1Schema: false)
-        {
-        }
+    //public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    //{
+    //    public ApplicationDbContext()
+    //        : base("ApplicationContext", throwIfV1Schema: false)
+    //    {
+    //    }
 
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
+    //    public static ApplicationDbContext Create()
+    //    {
+    //        return new ApplicationDbContext();
+    //    }
 
-        public System.Data.Entity.DbSet<JonBoard.Model.Board> Boards { get; set; }
-    }
+    //    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    //    {
+    //        base.OnModelCreating(modelBuilder);
+    //    }
+    //}
 }

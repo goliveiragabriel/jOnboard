@@ -54,29 +54,11 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201511251510528_InitialCreate.cs" />
-    <Compile Include="Migrations\201511251510528_InitialCreate.Designer.cs">
-      <DependentUpon>201511251510528_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511261535449_AddBoardClass.cs" />
-    <Compile Include="Migrations\201511261535449_AddBoardClass.Designer.cs">
-      <DependentUpon>201511261535449_AddBoardClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511251510528_InitialCreate.resx">
-      <DependentUpon>201511251510528_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511261535449_AddBoardClass.resx">
-      <DependentUpon>201511261535449_AddBoardClass.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

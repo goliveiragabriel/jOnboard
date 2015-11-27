@@ -7,13 +7,13 @@ namespace JonBoard.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialMigrate : IMigrationMetadata
+    public sealed partial class AddBoardUserRelationship : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigrate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddBoardUserRelationship));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511181848032_InitialMigrate"; }
+            get { return "201511271637304_AddBoardUserRelationship"; }
         }
         
         string IMigrationMetadata.Source
