@@ -32,7 +32,12 @@ namespace jOnBoard.Controllers
         [AllowAnonymous]
         public ActionResult Details(string h)
         {
-            return View();
+            Board board = db.Boards.FirstOrDefault(p => p.Id == h);
+            if (!User.Identity.IsAuthenticated && board.Visibility == Visibility.Private)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return View(board);
         }
 
         [HttpPost]
@@ -45,6 +50,7 @@ namespace jOnBoard.Controllers
             }
             var currentUserId = User.Identity.GetUserId();
             board.User = db.Users.Where(p => p.Id == currentUserId).First();
+            board.Id = Guid.NewGuid().ToString();
             db.Boards.Add(board);
 
             try
@@ -66,7 +72,34 @@ namespace jOnBoard.Controllers
             {
                 throw e;
             }
-            return RedirectToAction("Details", new { h = "A" });
+            return RedirectToAction("Details", new { h = board.Id });
+        }
+        [HttpPost]
+        public ActionResult EditName(string pk, string value)
+        {
+            Board board = db.Boards.FirstOrDefault(p => p.Id == pk);
+            board.Name = value;
+            try
+            {
+                db.SaveChanges();
+                db.Entry(board).State = EntityState.Modified;
+            }
+            catch (DbUpdateException)
+            {
+                if (BoardExists(board.Id))
+                {
+                    return View("Index");
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            catch (DbEntityValidationException e)
+            {
+                throw e;
+            }
+            return View();
         }
 
         private bool BoardExists(string p)

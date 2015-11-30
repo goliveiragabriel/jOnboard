@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Board
+@{
     ViewBag.Title = "My Board";
 }
 @section Scripts{
@@ -15,7 +16,8 @@
         </div>
 
     </aside>
-    <div class="col-xs-10">
+    <div class="col-xs-10" id="canvas">
+        <div><a href="#" id="name" value="@Model.Name" data-type="text" data-pk="@Model.Id" data-url="@Url.Action("EditName")" data-title="Enter name">@Model.Name</a></div>
         <div id="myholder">
         </div>
     </div>
@@ -31,5 +33,6 @@
             canvas.context.save();
 
         });
+        $('#name').editable();
     });
 </script>

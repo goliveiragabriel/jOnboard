@@ -58,3 +58,6 @@ button#Google {
 .user-info a.dropdown-toggle:hover {
     text-decoration: none;
 }
+#canvas {
+    margin-top: 10px;
+}

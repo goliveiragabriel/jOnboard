@@ -64,6 +64,22 @@
     <Compile Include="Migrations\201511271637304_AddBoardUserRelationship.Designer.cs">
       <DependentUpon>201511271637304_AddBoardUserRelationship.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511301530408_AddboardKey.cs" />
+    <Compile Include="Migrations\201511301530408_AddboardKey.Designer.cs">
+      <DependentUpon>201511301530408_AddboardKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511301534112_AddboardKey1.cs" />
+    <Compile Include="Migrations\201511301534112_AddboardKey1.Designer.cs">
+      <DependentUpon>201511301534112_AddboardKey1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511301535449_UpdateBoardKey.cs" />
+    <Compile Include="Migrations\201511301535449_UpdateBoardKey.Designer.cs">
+      <DependentUpon>201511301535449_UpdateBoardKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511301543189_AddNameAndVisibilityBoard.cs" />
+    <Compile Include="Migrations\201511301543189_AddNameAndVisibilityBoard.Designer.cs">
+      <DependentUpon>201511301543189_AddNameAndVisibilityBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -83,6 +99,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511271637304_AddBoardUserRelationship.resx">
       <DependentUpon>201511271637304_AddBoardUserRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511301530408_AddboardKey.resx">
+      <DependentUpon>201511301530408_AddboardKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511301534112_AddboardKey1.resx">
+      <DependentUpon>201511301534112_AddboardKey1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511301535449_UpdateBoardKey.resx">
+      <DependentUpon>201511301535449_UpdateBoardKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511301543189_AddNameAndVisibilityBoard.resx">
+      <DependentUpon>201511301543189_AddNameAndVisibilityBoard.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
